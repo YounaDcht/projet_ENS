@@ -1,0 +1,176 @@
+---
+title: "Analyse NDVI tentative 1354"
+author: "Youna"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(lubridate)
+library(corrplot)
+library(ggplot2)
+setwd("C:/Users/youy0/Desktop/master/PhD track/NDVI/nouveau_GLM")
+
+```
+
+Le but de cette analyse est de mettre en relation le NDVI avec les autres variables environnementales telles que les précipitations, la température, les débits et l'humidité. Nous souhaitons voir quelles variables permettent d'expliquer ce NDVI, notamment afin de comprendre pourquoi nos observations entre les effets de la sécheresse sur le NDVI et sur les débits sont si différentes.  
+Pour rappel: le débit du Couesnon ne montre pas de signe d'une grosse sécheresse alors que le NDVI semble montrer une réponse plutôt importante de la végétation.  
+  
+Pour cette analyse, Léa a extrait les NDVI moyens sur 15 jours pour l'ensemble du bassin versant. Pour une prochaine analyse nous avons aussi ces NDVI à l'échelle de la tourbière de Landemarais et du marais de Sougéal ce qui pourrait nous montrer les différences de réponses entre les deux sites.
+  
+  
+Pour analyser les données nous allons utiliser les modèles linéaires général ou généralisés. Les variables journalières ($X$) à disposition sont:  
+- **RH2M** = humidité à 2M au dessus du sol  
+- **T2M** = température à 2M au dessus du sol  
+- **TS** = température du sol  
+- **precip** = precipitations sur l'ensemble du BV  
+- **Debits** = débits du Couesnon  
+Nous voulons expliquer la variable $Y$ qui est le NDVI moyen à l'échelle du BV:
+$$ NDVI \approx RH2M + T2M + TS + precip + Debits$$
+
+Remarque: Un modèle linéaire doit respecter certaines conditions notamment:   
+- l'indépendance des données  
+- la relation linéaire entre la variable de réponse et les variables explicatives  
+- la stabilité des résidus (homogénéité des variances, normalité des résidus)  
+- pas de colinéarité entre les variables explicatives
+Les deux dernières conditions sont testées à postériorit, après la construction du modèle. La première condition dépend de l'échantillonnage, dans notre cas les données sont bien indépendanttes ????  
+Dans notre cas il y aura sûrement de la colinéarité entre nos variables, cela sera testé en calculant les corrélations.   
+  
+  
+Enfin, dans notre cas, plusieurs variables sont possibles pour chaque données climatiques. Par exemple pour les précipitations, le NDVI sera - t -il mieux prédit pas les précipitations sur les 15 jours précédant la date de fin? sur les 20 jours? sur les 25?...  
+Pour déterminer les variables séléctionnées, nous feront des regressions linéaires pour voir quelles durées ont les meilleures corrélations avec le NDVI. 
+
+
+# 1. Import des Données & formatage
+
+```{r}
+humidite <- read.csv("humidite.csv")
+ndvi <- read.table("NDVI_15j_LEA_nouveau_sept.txt",header = TRUE,stringsAsFactors = TRUE, na.strings = "NA",dec = ",")
+precip <- read.csv("precip.csv")
+deb_couesnon <- read.csv("deb_couesnon.csv")
+
+#format de la colonne "Date"  <- format date de r (package lubridate très cool)
+precip$Date <- as.Date(precip$Date,"%Y-%m-%d")
+humidite$Date <- as.Date(humidite$Date,"%Y-%m-%d")
+ndvi$Debut <- as.Date(ndvi$Debut,"%Y-%m-%d") #la colonne début correspond au premier jour compté dans la moyenne des 15 jours pour le NDVI
+ndvi$Date <- as.Date(ndvi$Fin)
+ndvi$Fin <- as.Date(ndvi$Fin,"%Y-%m-%d") #idem mais dernier jours
+deb_couesnon$Date <- as.Date(deb_couesnon$Date,"%Y-%m-%d")
+
+colnames(precip) <- c("Date","precip")
+
+```
+On veut associer à chaque valeur de NDVI les valeurs des variables environnementales. Pour le premier essai, on associe les moyennes sur les 15 jour du NDVI. 
+
+```{r}
+L <- list()
+for (i in seq(15,60,5)) {
+  temp <- deb_couesnon
+  for (j in i:length(temp$Debits)) {
+    temp$Debits[j]<- mean(temp$Debits[(j-i):j])
+  }
+  L[[as.character(i)]] <- left_join(x = ndvi,y = temp, by = "Date")
+  temp <- humidite
+  for (k in i:length(temp$RH2M)) {
+    temp$RH2M[k] <- mean(temp$RH2M[(k-i):k])
+    temp$T2M[k]<- mean(temp$T2M[(k-i):k])
+    temp$TS[k]<- mean(temp$TS[(k-i):k])
+    temp$T2M_MAX[k]<- mean(temp$T2M_MAX[(k-i):k])
+    temp$T2M_MIN[k]<- mean(temp$T2M_MIN[(k-i):k])
+    
+  }
+  L[[as.character(i)]] <- left_join(x = L[[as.character(i)]],y = temp, by = "Date")
+  temp <- precip
+  for (m in i:length(temp$precip)) {
+    temp$precip[m]<- mean(temp$precip[(m-i):m])
+    
+  }
+  L[[as.character(i)]] <- left_join(x = L[[as.character(i)]],y = temp, by = "Date")
+  
+}
+
+```
+
+# 2. Eploration des données
+
+## a. Données de NDVI :
+
+D'abord une représentation au cours du temps pour sélectionner les mois où la végétation est active
+
+```{r}
+
+ggplot(L[[1]])+
+  geom_line(aes(x = yday(Date), y = NDVI_moyen_BV, color = as.factor(year(Date))))+
+  theme_classic()
+```
+
+
+
+```{r}
+par(mfrow=c(2,2))
+# Boxplot
+boxplot(L[[1]]$NDVI_moyen_BV,col='blue',ylab='NDVI moyen')
+# Cleveland plot
+dotchart(L[[1]]$NDVI_moyen_BV,pch=16,col='blue',xlab='NDVI moyen')
+# Histogram
+hist(L[[1]]$NDVI_moyen_BV,col='blue',xlab="NDVI moyen",main="")
+# Quantile-Quantile plot
+qqnorm(L[[1]]$NDVI_moyen_BV,pch=16,col='blue',xlab='')
+qqline(L[[1]]$NDVI_moyen_BV,col='red')
+```
+
+Dans les deux premiers graphes on voir qu'acun point ne semble abbérant. Dans le second, on voit que la variable Y semble se rappocher d'une loi normale --> demander à Léa/Tatiana 
+
+## Données humidité
+
+```{r}
+for (i in 1:length(L)) {
+  par(mfrow=c(2,3))
+  # Minimal temperature
+  # Cleveland plot
+  dotchart(L[[i]]$RH2M,pch=16,col='blue',xlab=paste0("Humidité moyenne à 2m sur ",names(L[i])," jours "))
+  # Histogram
+  hist(L[[i]]$RH2M,col='blue',xlab=paste0("Humidité moyenne à 2m sur ",names(L[i])," jours "),main="")
+  # Quantile-Quantile plot
+  qqnorm(L[[i]]$RH2M,pch=16,col='blue',xlab='')
+  qqline(L[[i]]$RH2M,col='red')
+
+  # Minimal illuminance
+  # Cleveland plot
+  dotchart(L[[i]]$TS,pch=16,col='blue',xlab=paste0("Temperature du sol sur ",names(L[i])," jours "))
+  # Histogram
+  hist(L[[i]]$TS,col='blue',xlab= paste0("Temperature du sol sur ",names(L[i])," jours "),main="")
+  # Quantile-Quantile plot
+  qqnorm(L[[i]]$TS,pch=16,col='blue',xlab='')
+  qqline(L[[i]]$TS,col='red')
+}
+
+
+```
+2 points un peu louches, mais si t <0 alors sol sec donc peut être ok?
+
+## Analyse des relations potentielles entre les variables environnementales et le NDVI
+
+```{r}
+for (i in 1:length(L)) {
+  par(mfrow = c(1,2))
+  # Humidité air
+  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$RH2M,pch=16,col='blue',xlab=paste0('Humidité moyenne sur ',   names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #température du sol
+  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$TS,pch=16,col='blue',xlab=paste0('Température moyenne du     sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+}
+```
+C'est globalement le bordel, on essaie en ne gardant que les mois d'activité des plantes (arbitrairement pour l'instant avril à Septembre)
+
+```{r}
+for (i in 1:length(L)) {
+  par(mfrow = c(1,2))
+  # Humidité air
+  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"RH2M"],pch=16,col='blue',xlab=paste0('Humidité moyenne sur ',   names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #température du sol
+  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"TS"],pch=16,col='blue',xlab=paste0('Température moyenne du sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+}
+```
+MOUAI 
