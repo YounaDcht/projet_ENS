@@ -125,10 +125,11 @@ Dans les deux premiers graphes on voir qu'acun point ne semble abbérant. Dans l
 
 ## Données humidité
 
-```{r}
+```{r, fig.height=7, fig.width=7}
+
 for (i in 1:length(L)) {
-  par(mfrow=c(2,3))
-  # Minimal temperature
+  par(mfrow=c(4,3))
+  # Humidité moyenne
   # Cleveland plot
   dotchart(L[[i]]$RH2M,pch=16,col='blue',xlab=paste0("Humidité moyenne à 2m sur ",names(L[i])," jours "))
   # Histogram
@@ -137,14 +138,33 @@ for (i in 1:length(L)) {
   qqnorm(L[[i]]$RH2M,pch=16,col='blue',xlab='')
   qqline(L[[i]]$RH2M,col='red')
 
-  # Minimal illuminance
+  # Température de l'air
   # Cleveland plot
-  dotchart(L[[i]]$TS,pch=16,col='blue',xlab=paste0("Temperature du sol sur ",names(L[i])," jours "))
+  dotchart(L[[i]]$T2M,pch=16,col='blue',xlab=paste0("Temperature de l'air sur ",names(L[i])," jours "))
   # Histogram
-  hist(L[[i]]$TS,col='blue',xlab= paste0("Temperature du sol sur ",names(L[i])," jours "),main="")
+  hist(L[[i]]$T2M,col='blue',xlab= paste0("Temperature de l'air sur ",names(L[i])," jours "),main="")
   # Quantile-Quantile plot
-  qqnorm(L[[i]]$TS,pch=16,col='blue',xlab='')
-  qqline(L[[i]]$TS,col='red')
+  qqnorm(L[[i]]$T2M,pch=16,col='blue',xlab='')
+  qqline(L[[i]]$T2M,col='red')
+  
+  # Precipitations
+  # Cleveland plot
+  dotchart(L[[i]]$precip,pch=16,col='blue',xlab=paste0("Precipitations moyennes sur ",names(L[i])," jours "))
+  # Histogram
+  hist(L[[i]]$precip,col='blue',xlab= paste0("Precipitations moyennes sur ",names(L[i])," jours "),main="")
+  # Quantile-Quantile plot
+  qqnorm(L[[i]]$precip,pch=16,col='blue',xlab='')
+  qqline(L[[i]]$precip,col='red')
+  
+  # Débits
+  # Cleveland plot
+  dotchart(L[[i]]$Debits,pch=16,col='blue',xlab=paste0("Débits moyens sur ",names(L[i])," jours "))
+  # Histogram
+  hist(L[[i]]$Debits,col='blue',xlab= paste0("Débits moyens sur ",names(L[i])," jours "),main="")
+  # Quantile-Quantile plot
+  qqnorm(L[[i]]$Debits,pch=16,col='blue',xlab='')
+  qqline(L[[i]]$Debits,col='red')
+  
 }
 
 
@@ -153,24 +173,32 @@ for (i in 1:length(L)) {
 
 ## Analyse des relations potentielles entre les variables environnementales et le NDVI
 
-```{r}
+```{r, fig.height=7, fig.width=7}
 for (i in 1:length(L)) {
-  par(mfrow = c(1,2))
+  par(mfrow = c(2,2))
   # Humidité air
   plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$RH2M,pch=16,col='blue',xlab=paste0('Humidité moyenne sur ',   names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
   #température du sol
-  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$TS,pch=16,col='blue',xlab=paste0('Température moyenne du     sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$T2M,pch=16,col='blue',xlab=paste0('Température moyenne du     sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #Precipitations
+  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$precip,pch=16,col='blue',xlab=paste0('precipitations moyenne sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #Débits
+  plot(L[[i]]$NDVI_moyen_BV ~L[[i]]$Debits,pch=16,col='blue',xlab=paste0('Débits moyens du sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
 }
 ```
 C'est globalement le bordel, on essaie en ne gardant que les mois d'activité des plantes (arbitrairement pour l'instant avril à Septembre)
 
-```{r}
+```{r, fig.height=7, fig.width=7}
 for (i in 1:length(L)) {
-  par(mfrow = c(1,2))
+  par(mfrow = c(2,2))
   # Humidité air
   plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"RH2M"],pch=16,col='blue',xlab=paste0('Humidité moyenne sur ',   names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
-  #température du sol
-  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"TS"],pch=16,col='blue',xlab=paste0('Température moyenne du sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #température air
+  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"T2M"],pch=16,col='blue',xlab=paste0('Température moyenne du sol sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #Précipitations
+  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"precip"],pch=16,col='blue',xlab=paste0('Précipitations moyennes sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
+  #Débit
+  plot(L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"NDVI_moyen_BV"] ~L[[i]][month(L[[i]]$Debut) >= 4 & month(L[[i]]$Fin) <=9,"Debits"],pch=16,col='blue',xlab=paste0('Débits moyens sur ', names(L[i])," jours"),ylab='NDVI moyen du BV sur 15 jours')
 }
 ```
 MOUAI 
