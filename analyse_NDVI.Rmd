@@ -1,6 +1,6 @@
 ---
 title: "Analyse NDVI tentative 1354"
-author: "Youna"
+author: "Youna DOUCHET - Bastien CL�MOT"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -12,7 +12,6 @@ library(lubridate)
 library(corrplot)
 library(ggplot2)
 setwd("C:/Users/youy0/Desktop/master/PhD track/NDVI/nouveau_GLM")
-
 ```
 
 Le but de cette analyse est de mettre en relation le NDVI avec les autres variables environnementales telles que les précipitations, la température, les débits et l'humidité. Nous souhaitons voir quelles variables permettent d'expliquer ce NDVI, notamment afin de comprendre pourquoi nos observations entre les effets de la sécheresse sur le NDVI et sur les débits sont si différentes.  
