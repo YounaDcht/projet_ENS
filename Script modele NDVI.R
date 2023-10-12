@@ -1,6 +1,10 @@
 ##### PhD Track NDVI model #####
 
 
+# Packages ----------------------------------------------------------------
+library(tidyverse)
+
+
 # Data --------------------------------------------------------------------
 ndvi <- read.table("NDVI_15j_LEA_nouveau_sept.txt",header = TRUE,stringsAsFactors = TRUE, na.strings = "NA",dec = ",")
 humidite <- read.csv("humidite.csv")
@@ -270,6 +274,10 @@ hist(df.tourbiere$precip,col='grey',xlab="Precipitation moyenne Tourbiere Landem
 qqnorm(df.tourbiere$precip,pch=16,col='grey',xlab='')
 qqline(df.tourbiere$precip,col='red')
 
+dev.off()
+# Visualisation des outliers
+plot(df.tourbiere$precip)
+
 # # Extraction des outliers
 # quartiles <- quantile(df.tourbiere$precip, probs = c(0.25, 0.75), na.rm = TRUE)
 # IQR <- quartiles[2] - quartiles[1]
@@ -291,6 +299,7 @@ qqline(df.tourbiere$precip,col='red')
 
 
 # Exploration de X - Precipitation Marais Sougeal -------------------------
+par(mfrow=c(2,2))
 # Boxplot
 boxplot(df.marais$precip,col='grey',ylab='Precipitation moyenne Marais Sougeal')
 # Cleveland plot
@@ -300,6 +309,10 @@ hist(df.marais$precip,col='grey',xlab="Precipitation moyenne Marais Sougeal",mai
 # Quantile-Quantile plot
 qqnorm(df.marais$precip,pch=16,col='grey',xlab='')
 qqline(df.marais$precip,col='red')
+
+dev.off()
+# Visualisation des outliers
+plot(df.marais$precip)
 
 # # Extraction des outliers
 # quartiles <- quantile(df.marais$precip, probs = c(0.25, 0.75), na.rm = TRUE)
@@ -351,12 +364,18 @@ library(corrplot)
 dev.off()
 M <- cor(df.tourbiere[,c("T2M","Debits","RH2M","precip")])
 corrplot.mixed(M,upper="square",lower.col="black", tl.col="black",cl.cex = 0.7,tl.cex = 0.6,number.cex =0.7)
+# On choisi de retirer la température
 
 
 # Modele Analysis ------------------------------------------------------------------
 # Full model Tourbiere Landemerais
-mod.tourbiere1<-lm(NDVI_moyen_Tourbiere_Landemarais ~ T2M + Debits + RH2M + precip, data = df.tourbiere)
+mod.tourbiere1<-lm(NDVI_moyen_Tourbiere_Landemarais ~ Debits * RH2M * precip, data = df.tourbiere)
 summary(mod.tourbiere1)
 # Full model Marais Sougeal
-mod.marais1<-lm(NDVI_moyen_Tourbiere_Landemarais ~ T2M + Debits + RH2M + precip, data = df.marais)
+mod.marais1<-lm(NDVI_moyen_Tourbiere_Landemarais ~ Debits * RH2M * precip, data = df.marais)
 summary(mod.marais1)
+
+
+# Check for colinearity ---------------------------------------------------
+
+
