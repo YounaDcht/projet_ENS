@@ -1,0 +1,31 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jun-17	Jun-19
+code_CORINE_habitat	53.216	53.216				
+code_EUR_15_habitat						
+hauteur_de_vegetation_(cm)	100	150	200	200	190	190
+recouvrement_total_%	25	70	70	40	50	40
+recouvrement_ligneux__%	5		10	10	1	
+hauteur_strate_ligneuse__(cm)	250		200	250	50	
+recouvrement_herbacee_%	20	60	70	40	50	40
+hauteur_strate_herbacee_(cm)	150	150	200	200	190	190
+recouvrement_muscinal_%						
+hauteur_strate_muscinale_(cm)						
+hauteur_eau_libre_(cm)	vase_nue	vase_nue	30	15	1	50
+nombre_d_especes	9	10	9	10	11	1
+Salix_atrocinerea	1	1	1	2	+	0
+Quercus_robur	+	0	0	+	+	0
+Carex_paniculata	3	4	4	3	3	3
+Carex_canescens	0	+	0	0	0	0
+Juncus_effusus_conglomeratus	2	1	0	0	0	0
+Equisetum_fluviatile	0	0	0	+	+	0
+Angelica_sylvestris	0	+	+	0	+	0
+Lycopus_europaeus	+	0	0	+	+	0
+Lysimachia_vulgaris	0	+	+	0	0	0
+Hydrocotyle_vulgaris	+	1	+	+	+	0
+Comarum_palustre	0	0	+	0	0	0
+Bidens_cernua_/_connata	0	+	0	0	+	0
+Galium_palustre	+	0	+	+	1	0
+Epilobium_tetragonum	0	0	0	+	0	0
+Epilobium_palustre	0	+	0	0	0	0
+Lemna_minor	0	0	1	+	1	0
+Callitriche_stagnalis	2	+	1	+	1	0
+Cirsium_palustre	+	0	0	0	0	0

@@ -1,0 +1,31 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	54.531	54.531						
+code_EUR_15_habitat	71.40	71.40						
+surface_du_releve_(R_en_m)	3	3	3		3	3	3	3
+hauteur_de_vegetation_(cm)	120	120	120	120	120	140	150	130
+recouvrement_total_%	4	60	80	70	70	70	50	50
+recouvrement_ligneux_%	1	3	15	2	1	2	0	0
+hauteur_strate_ligneuse_(cm)	130	150	200	50	60	90	0	0
+recouvrement_herbacee_%	40	60	80	70	70	70	50	50
+hauteur_strate_herbacee_(cm)	130	120	120	120	120	140	150	130
+recouvrement_muscinal_%					5	5	5	0
+hauteur_strate_muscinale_(cm)					10	5	30	0
+hauteur_eau_libre_(cm)	algues_vase	tourbe_vase_nue_40%	humide_pas_d_eau_libre	humide_pas_d_eau_libre	10	humide_pas_d_eau_libre	30	40
+nombre_d_especes	10	12	12	15	12	14	12	6
+Salix_atrocinerea	+	2	2	+	+	1	0	0
+Frangula_alnus	+	+	1	+	0	0	0	0
+Carex_rostrata	2	2	2	2	2	2	2	0
+Carex_paniculata	0	1	2	2	2	1	1	2
+Carex_canescens	0	0	0	+	+	1	2	0
+Juncus_effusus_conglomeratus	4	3	4	4	4	4	3	3
+Juncus_bulbosus	0	1	2	1	1	2	0	0
+Hydrocotyle_vulgaris	2	3	4	3	2	3	1	1
+Epilobium_palustre	+	2	2	1	1	2	+	0
+Lysimachia_vulgaris	1	1	2	2	2	3	1	+
+Lycopus_europaeus	0	1	1	1	1	2	1	+
+Eriophorum_angustifolium	1	0	1	0	0	1	+	0
+Agrostis_canina	0	0	0	+	+	0	0	0
+Galium_palustre	0	+	+	1	+	+	+	0
+Lemna_minor	+	0	0	0	0	+	+	0
+Callitriche_stagnalis	+	0	0	0	0	0	0	0
+Sphagnum_sp	0	0	0	+	+	+	+	0

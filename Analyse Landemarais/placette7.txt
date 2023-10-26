@@ -1,0 +1,31 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	51.113	51.113						
+code_EUR_15_habitat	71.20	71.20						
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	90	90	100	80	100	100	100	120
+recouvrement_total_%	100	100	100	100	98	100	100	90
+recouvrement_ligneux_bas_%	90	90	90	70	75	80	90	70
+hauteur_strate_ligneuse_basse_(cm)	90	90	100	80	100	100	100	90
+recouvrement_ligneux_haut_%	2						0	2
+hauteur_strate_ligneuse_haute_(cm)	120						0	120
+recouvrement_herbacee_%	10	10	10	20	20	15	15	20
+hauteur_strate_herbacee_(cm)	90	60	80	60	50	60	60	60
+recouvrement_muscinal_%	90	90	90	80	80	80	90	70
+hauteur_strate_muscinale_(cm)	15	15	25	15	15	15	20	15
+hauteur_eau_libre_(cm)								
+nombre_d_especes	11	11	11	7	9	8	8	9
+Calluna_vulgaris	4	4	5	4	4	4	5	4
+Erica_tetralix	3	3	3	3	3	3	3	4
+Quercus_robur	i	i	0	0	+	0	0	0
+Betula_pubescens	1	+	+	+	+	+	+	+
+Carex_nigra	0	0	0	0	0	0	0	+
+Molinia_caerulea	1	1	1	1	1	2	2	2
+Eriophorum_vaginatum	2	2	2	2	2	2	2	2
+Vaccinium_oxycoccos	+	1	1	1	1	1	+	1
+Rubus_fructicosus	0	0	0	0	+	0	0	0
+Sphagnum_sp	2	2	5	2	5	5	5	4
+Pleurozium_schreberi	3	3	5	0	0	0	0	0
+Hypnum_jutlandicum	3	3	5	0	0	0	0	0
+Dicranum_scoparium	0	0	5	0	0	0	0	0
+Aulacomnium_palustre	1	1	5	0	0	0	0	0
+Dryopteris_carthusiana	0	0	0	0	0	+	1	1

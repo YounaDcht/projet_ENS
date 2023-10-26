@@ -1,0 +1,36 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jun-17	Jun-19	Jun-22
+code_CORINE_habitat	54.422	54.422					
+code_EUR_15_habitat	71.40	71.40					
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	80	100	150	110	110	120	110
+recouvrement_total_%	90	100	100	100	100	75	90
+recouvrement_ligneux__%		1		1			
+hauteur_strate_ligneuse__(cm)		80		15			
+recouvrement_herbacee_%	90	90	90	80	100	75	85
+hauteur_strate_herbacee_(cm)	80	100	150	110	110	120	110
+recouvrement_muscinal_%	40	60	75	70	60	5	15
+hauteur_strate_muscinale_(cm)	7.5	7.5	40	40	15	10	10
+hauteur_eau_libre_(cm)						20	
+nombre_d_especes	12	13	11	10	11	8	12
+Salix_atrocinerea	0	i	0	+	0	0	0
+Erica_tetralix	0	0	0	0	0	0	0
+Vaccinium_oxycoccos	+	i	i	0	0	0	0
+Quercus_robur	0	i	0	0	0	0	0
+Molinia_caerulea	3	3	4	3	4	4	4
+Carex_rostrata	3	3	1	2	1	2	2
+Carex_nigra	2	2	+	2	3	2	2
+Carex_paniculata	1	1	1	2	1	2	2
+Juncus_effusus_conglomeratus	1	1	2	2	2	2	2
+Eriophorum_vaginatum	+	+	+	1	1	0	1
+Epilobium_palustre	1	1	1	2	2	+	1
+Epilobium_tetragonum	+	0	+	+	1	0	0
+Lycopus_europaeus	0	+	i	0	+	0	1
+Hydrocotyle_vulgaris	0	0	0	0	2	1	3
+Lysimachia_vulgaris	0	0	0	0	0	0	+
+Galium_palustre	0	0	0	0	0	0	1
+Sphagnum_sp	4	4	4	4	3	1	2
+Polytrichum_strictum	0	0	0	0	0	0	0
+Aulacomnium_palustre	1	2	0	0	0	0	0
+Calliergonella_cuspidata	1	0	0	0	0	0	0
+Kindbergia_praelonga	0	1	0	0	0	0	0
+Dryopteris_carthusiana	0	0	0	+	0	0	0

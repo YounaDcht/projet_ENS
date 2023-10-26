@@ -1,0 +1,37 @@
+date_du_releve	Jul-12	Jul-13	Jul-15	Jun-17
+code_CORINE_habitat	53.216	53.216		
+code_EUR_15_habitat				
+surface_du_releve_(R_en_m)	3	3		
+hauteur_de_vegetation_(cm)	130	120	170	170
+recouvrement_total_%	90	100	90	75
+recouvrement_ligneux__%	5	10	10	1
+hauteur_strate_ligneuse__(cm)	200	200	100	5
+recouvrement_herbacee_%	90	95	90	7
+hauteur_strate_herbacee_(cm)	130	120	170	170
+recouvrement_muscinal_%		2		
+hauteur_strate_muscinale_(cm)		1		
+hauteur_eau_libre_(cm)		ferme	2.5	sature
+nombre_d_especes	13	10	13	12
+Salix_atrocinerea	2	2	2	+
+Agrostis_stolonifera	+	+	1	+
+Carex_paniculata	3	4	4	4
+Carex_nigra	+	+	+	0
+Carex_rostrata	2	2	1	0
+Carex_canescens	0	0	0	1
+Juncus_effusus_conglomeratus	4	4	2	1
+Juncus_bulbosus	0	0	0	1
+Wahlenbergia	0	0	1	0
+Hydrocotyle_vulgaris	0	0	2	2
+Lotus_uliginosus	+	0	0	0
+Lychnis_flos_cuculi	0	0	+	0
+Angelica_sylvestris	2	2	1	+
+Lysimachia_vulgaris	0	0	+	1
+Lycopus_europaeus	1	1	0	0
+Galium_palustre	0	0	0	1
+Epilobium_tetragonum	+	1	0	+
+Cirsium_palustre	0	0	1	0
+Solanum_dulcamara	+	1	0	0
+Epilobium_palustre	1	0	0	0
+Lemna_minor	1	0	0	0
+Cardamine_pratensis	0	0	0	+
+Athyrium_filix_femina	0	0	+	0

@@ -1,0 +1,37 @@
+date_du_releve	Jul-12	Jul-13	Jul-15	Jun-17	Jun-19	Jun-22
+code_CORINE_habitat	31.11	31.11				
+code_EUR_15_habitat	40.10	40.10				
+surface_du_releve_(R_en_m)	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	70	70	100	120	120	120
+recouvrement_total_%	100	100	100	100	90	100
+recouvrement_ligneux_bas_%	20	20	20	20	25	20
+hauteur_strate_ligneuse_basse_(cm)	80	80	120	120	120	110
+recouvrement_ligneux_haut_%	5	3	0			
+hauteur_strate_ligneuse_haute_(cm)	70	70				
+recouvrement_herbacee_%	60	80	80	80	80	80
+hauteur_strate_herbacee_(cm)	80	60	100	100	100	120
+recouvrement_muscinal_%	90	90	95	90	90	90
+hauteur_strate_muscinale_(cm)	17.5	17.5	40	40	40	40
+hauteur_eau_libre_(cm)	ferme	ferme				
+nombre_d_especes	11	12	9	12	9	14
+Calluna_vulgaris	2	2	2	2	2	2
+Erica_tetralix	2	2	1	1	1	1
+Betula_pubescens	2	1	+	+	+	0
+Frangula_alnus	1	+	0	+	+	+	
+Rubus_fructicosus	0	0	+	0	0	0
+Salix_atrocinerea	0	0	0	0	0	+
+Molinia_caerulea	4	4	4	4	4	4
+Carex_paniculata	2	2	2	2	2	2
+Carex_rostrata	0	0	0	0	0	1
+Juncus_effusus_conglomeratus	+	+	+	1	1	1
+Hydrocotyle_vulgaris	+	+	1	2	2	2
+Galium_palustre	0	0	+	1	0	0
+Epilobium_tetragonum	0	0	0	+	0	0
+Dosera_rotundifolia	0	0	0	+	0	1
+Eriophorum_angustifolium	0	0	0	0	0	+
+Ranunculus_repens	0	0	0	0	0	+
+Sphagnum_sp	5	5	0	4	5	5
+Aulacomnium_palustre	2	2	0	0	0	0
+Hypnum_jutlandicum	1	1	0	0	0	0
+Pleurozium_schreberi	0	+	0	0	0	0
+Dryopteris_carthusiana	0	0	0	0	0	+

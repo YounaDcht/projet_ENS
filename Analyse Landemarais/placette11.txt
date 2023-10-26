@@ -1,0 +1,40 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	54.59	54.59						
+code_EUR_15_habitat	71.40	71.40						
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	110	120	180	160	130	150	150	130
+recouvrement_total_%	80	100	90	90	75	85	60	75
+recouvrement_ligneux__%	1		5	2	1	1	1	
+hauteur_strate_ligneuse__(cm)	70		140	150	70	120	20	
+recouvrement_herbacee_%	80	100	90	90	75	85	60	75
+hauteur_strate_herbacee_(cm)	55	85	180	160	130	150	150	130
+recouvrement_muscinal_%								
+hauteur_strate_muscinale_(cm)								
+hauteur_eau_libre_(cm)			0	0	20	0	35	40
+nombre_d_especes	9	12	9	14	10	11	17	6
+Salix_atrocinerea	0	0	1	1	0	+	+	0
+Salix_aurita	+	0	0	0	0	0	0	0
+Frangula_alnus	+	0	0	0	0	+	0	0
+Molinia_caerulea	+	+	0	0	+	1	1	0
+Agrostis_stolonifera	0	0	0	+	0	0	0	0
+Carex_rostrata	2	2	1	1	+	1	1	0
+Eriophorum_angustifolium	0	0	0	0	0	0	+	0
+Carex_paniculata	2	2	3	4	4	4	4	4
+Carex_canescens	0	+	0	+	+	+	2	0
+Juncus_effusus_conglomeratus	2	3	2	2	2	2	1	1
+Juncus_bulbosus	0	0	0	0	0	0	+	0
+Comarum_palustre	4	4	4	3	3	3	2	1
+Lysimachia_vulgaris	+	1	1	+	+	1	0	+
+Hydrocotyle_vulgaris	0	0	+	+	+	1	1	1
+Galium_palustre	0	1	+	+	+	0	+	0
+Epilobium_tetragonum	+	0	0	0	0	0	0	0
+Lycopus_europaeus	0	+	+	0	0	0	0	0
+Angelica_sylvestris	0	0	0	0	0	0	+	0
+Cirsium_palustre	0	0	0	0	0	0	+	0
+Equisetum_fluviatile	0	+	0	+	+	+	0	0
+Epilobium_palustre	0	+	0	0	0	0	0	0
+Dryopteris_carthusiana	0	0	0	+	0	0	0	0
+Rubus_sp	0	0	0	0	0	0	+	0
+Sphagnum_sp	0	+	0	1	0	0	+	0
+Callitriche_sp	0	0	0	1	0	0	+	0
+lemna_minor	0	0	0	0	0	0	+	1

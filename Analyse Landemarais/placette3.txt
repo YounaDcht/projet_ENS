@@ -1,0 +1,38 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	54.531	54.531						
+code_EUR_15_habitat	71.40	71.40						
+surface_du_releve_(R_en_m)	3	3	3		3	3	3	3
+hauteur_de_vegetation_(cm)	130	120	120	130	130	100	150	150
+recouvrement_total_%	95	100	100	90	95	100	80	75
+recouvrement_ligneux_bas_%	2	2	2	1	1	1	50	
+hauteur_strate_ligneuse_basse_(cm)	70	50	40	60	100	70	65	
+recouvrement_ligneux_haut_%	1						0	
+hauteur_strate_ligneuse_haute_(cm)	110						0	
+recouvrement_herbacee_%	90	80	85	90	90	90	75	75
+hauteur_strate_herbacee_(cm)	130	120	140	130	130	90	150	150
+recouvrement_muscinal_%	95	95	95	95	95	90	10	1
+hauteur_strate_muscinale_(cm)	40	40	45	30	30	35	25	
+hauteur_eau_libre_(cm)			0	0	5	humide_pas_d_eau_libre	20	20
+nombre_d_especes	10	12	9	10	9	10	11	14
+Erica_tetralix	1	1	1	2	2	2	1	2
+Frangula_alnus	0	+	0	+	0	0	0	0
+Salix_atrocinerea	+	+	+	0	+	+	0	0
+Poa_trivialis	0	0	0	+	0	0	0	0
+Carex_rostrata	3	2	2	2	2	3	3	3
+Eriophorum_angustifolium	0	0	0	0	+	0	0	0
+Carex_paniculata	+	+	+	0	0	+	1	2
+Molinia_caerulea	0	0	0	0	0	0	0	1
+Juncus_effusus_conglomeratus	4	4	4	4	5	5	4	4
+Hydrocotyle_vulgaris	2	3	4	4	4	5	2	2
+Angelica_sylvestris	0	0	0	+	0	+	0	0
+Epilobium_palustre	2	2	3	3	2	2	+	1
+Vaccinium_oxycoccos	+	+	+	+	0	0	0	0
+Galium_palustre	0	0	0	0	1	+	+	+
+Comarum_palustre	0	0	0	0	0	0	+	+
+Solanum_dulcamara	0	0	0	0	0	0	+	1
+Bidens_tripartita	0	0	0	0	0	0	+	+
+Lysimachia_vulgaris	0	0	0	0	0	0	0	+
+Lemna_minor	0	0	0	0	0	0	0	+
+Sphagnum_sp	5	5	5	5	5	5	2	+
+Aulacomnium_palustre	2	+	0	0	0	0	0	0
+Calliergonella_cuspidata	0	+	0	0	0	0	0	0
