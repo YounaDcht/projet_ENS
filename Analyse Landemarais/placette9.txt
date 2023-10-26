@@ -1,0 +1,37 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jun-17	Jun-19	Jun-22
+code_CORINE_habitat	37.217	37.217					
+code_EUR_15_habitat							
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	5	40	140	140	110	120	50
+recouvrement_total_%	60	80	75	70	75	15	25
+recouvrement_ligneux__%	5	5	2.5	5	1		15
+hauteur_strate_ligneuse__(cm)	80	40	60	100	80		5
+recouvrement_herbacee_%	60	80	75	70	60	15	10
+hauteur_strate_herbacee_(cm)	30	40	140	140	110	120	50
+recouvrement_muscinal_%	5	5	0	1			
+hauteur_strate_muscinale_(cm)	5	1		2			
+hauteur_eau_libre_(cm)			vase_molle_voile_d_algue	10cm_voile_d_algue_par_endroit	sature_en_eau	40	sature_en_eau
+nombre_d_especes	8	9	10	8	8	3	5
+Salix_atrocinerea	1	1	1	1	2	0	2
+Molinia_caerulea	+	+	+	0	+	+	0
+Eryophorum_angustifolium	+	0	0	0	0	0	0
+Carex_rostrata	+	+	0	+	0	0	0
+Carex_canescens	0	1	1	1	2	1	1
+Carex_paniculata	+	+	+	+	0	0	0
+Juncus_effusus_conglomeratus	4	3	4	4	3	2	2
+Juncus_bulbosus	0	0	1	0	2	0	0
+Cyperus_fuscus	0	0	0	0	0	0	1
+Hydrocotyle_vulgaris	0	0	5	3	1	0	0
+Lysimachia_vulgaris	1	4	i	0	0	0	0
+Epilobium_palustre	0	0	+	+	+	0	0
+Epilobium_tetragonum	0	2	i	0	0	0	0
+Lycopus_europaeus	0	0	0	0	+	0	0
+Dryopteris_carthusiana	0	+	0	0	0	0	0
+Lythrum_portula	0	0	0	0	0	0	1
+Callitriche_stagnalis	+	0	0	+	0	0	0
+Myosotis_sp	1	1	0	0	1	0	0
+Galium_palustre	0	+	1	+	1	0	+
+Ranunculus_flammula	0	0	i	0	0	0	0
+Sphagnum_sp	0	0	0	0	3	0	0
+Riccia_fluitans	1	2	0	0	0	0	0
+Lemna_minor	0	0	0	+	0	1	2

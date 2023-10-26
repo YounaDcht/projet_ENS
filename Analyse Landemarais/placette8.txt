@@ -1,0 +1,46 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	51.115	51.115						
+code_EUR_15_habitat	71.10	71.10						
+surface_du_releve_(R_en_m)	40	40	40	40	40	40	40	40
+hauteur_de_vegetation_(cm)	100	100	90	90	100	130	120	90
+recouvrement_total_%	95	100	95	95	80	95	70	70
+recouvrement_ligneux_bas_%	10	20	25	20	20	4		
+hauteur_strate_ligneuse_basse_(cm)	80	60	50	50	60	110	60	55
+recouvrement_ligneux_haut_%								
+hauteur_strate_ligneuse_haute_(cm)								
+recouvrement_herbacee_%	90	90	80	80	75	95		
+hauteur_strate_herbacee_(cm)	100	100	90	90	100	130		90
+recouvrement_muscinal_%	60	70	75	80	25	25		
+hauteur_strate_muscinale_(cm)		40	40	20	10	15		
+hauteur_eau_libre_(cm)	ferme	ferme			sature		10	25
+nombre_d_especes	18	20	24	23	23	26	23	13
+Erica_tetralix	2	2	2	2	2	2	2	2
+Calluna_vulgaris	1	1	1	1	1	1	1	1
+Betula_pubescens	0	0	+	0	0	0	0	0
+Salix_atrocinerea	1	1	1	1	+	1	0	0
+Molinia_caerulea	3	4	4	4	4	3	4	4
+Eriophorum_vaginatum	3	2	2	2	2	2	2	1
+Eriophorum_angustifolium	2	+	1	1	1	1	1	1
+Carex_rostrata	3	3	3	3	3	3	2	1
+Carex_paniculata	+	+	+	+	+	1	2	2
+Juncus_effusus_conglomeratus	1	2	2	2	2	3	2	2
+Carex_canescens	1	+	1	1	1	1	1	0
+Vaccinium_oxycoccos	2	2	2	2	2	2	+	+
+Hydrocotyle_vulgaris	2	3	4	4	3	3	2	1
+Bidens_tripartita	0	0	0	0	0	+	0	0
+Epilobium_palustre	2	2	2	1	+	2	1	1
+Epilobium_tetragonum	0	0	0	0	0	1	0	0
+Lycopus_europaeus	+	0	1	+	0	+	0	0
+Lemna_minor	0	0	0	0	0	0	+	0
+Cirsium_palustre	i	0	0	0	0	0	0	0
+Lysimachia_vulgaris	0	+	1	+	+	+	1	+
+Eupatorium_cannabinum	0	i	0	0	0	0	0	0
+Galium_palustre	0	0	0	0	+	+	1	1
+Pleurozium_schreberi	0	+	4	4	2	3	2	0
+Aulacomnium_palustre	+	1	4	4	2	3	2	0
+Polytrichum_strictum	0	0	4	4	2	3	2	0
+Hypnum_jutlandicum	0	+	4	4	2	3	2	0
+PseudoPseudoscleropodium_purum	+	0	4	4	2	3	2	0
+Campylopus_sp	0	0	4	4	2	3	2	0
+Kindbergia_praelonga	0	+	4	4	2	3	2	0
+Sphagnum_sp	3	5	5	5	3	5	3	0

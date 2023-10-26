@@ -1,0 +1,23 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jun-17
+code_CORINE_habitat	53.216	53.216			
+code_EUR_15_habitat					
+surface_du_relevé_(R_en_m)	3	3	3	3	3
+hauteur_de_végétation_(cm)	150	150	160	160	160
+recouvrement_total_%	100	100	100	100	100
+recouvrement_ligneux__%		1	1	3	1
+hauteur_strate_ligneuse__(cm)		100	160	170	140
+recouvrement_herbacée_%	100	100	100	100	100
+hauteur_strate_herbacée_(cm)	150	150	160	160	160
+recouvrement_muscinal_%	5				
+hauteur_strate_muscinale_(cm)					
+hauteur_eau_libre_(cm)	assez_sec	assez_sec	sec	0	0
+nombre_d_especes	7	7	4	5	7
+Salix_atrocinerea	0	0	0	1	+
+Frangula_alnus	0	1	0	+	+
+Rubus_fructicosus	+	+	+	+	+
+Carex_paniculata	5	5	5	5	5
+Juncus_effusus_conglomeratus	+	0	0	0	+
+Lysimachia_vulgaris	1	1	1	1	1
+Angelica_sylvestris	1	+	1	0	1
+Kindbergia_praelonga	2	2	0	0	0
+Calliergonella_cuspidata	+	+	0	0	0

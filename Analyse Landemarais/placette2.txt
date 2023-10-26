@@ -1,0 +1,35 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-22
+code_CORINE_habitat	54.531	54.531						
+code_EUR_15_habitat	71.40	71.40						
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	130	120	140	120	120	130	140	110
+recouvrement_total_%	100	100	100	95	90	100	80	95
+recouvrement_ligneux_bas_%	2	8	10	3	1	3	3	
+hauteur_strate_ligneuse_basse_(cm)	4	40	50	60	60	120	40	
+recouvrement_ligneux_haut_%	5	5	20	0	0	0	0	
+hauteur_strate_ligneuse_haute_(cm)	110	120	200	0	0	0	0	
+recouvrement_herbacee_%	90	80	9	90	90	95	80	95
+hauteur_strate_herbacee_(cm)	130	120	140	120	120	130	140	110
+recouvrement_muscinal_%	90	90	90	90	90	90	4	45
+hauteur_strate_muscinale_(cm)	30	30	30	30	30	40	20	20
+hauteur_eau_libre_(cm)	sature	ferme	0	0	sature		15	
+nombre_d_especes	10	10	11	11	9	14	9	10
+Salix_atrocinerea	1	2	2	1	+	1	0	0
+Erica_tetralix	1	1	1	1	1	1	1	1
+Frangula_alnus	0	0	0	1	0	+	0	0
+Quercus_robur	0	0	0	+	+	+	+	0
+Molinia_caerulea	+	+	+	0	0	+	0	0
+Agrostis_canina	0	0	+	0	0	0	0	0
+Carex_canescens	0	0	0	+	0	0	1	0
+Carex_rostrata	2	2	3	3	3	3	3	3
+Juncus_effusus_conglomeratus	4	5	5	5	5	5	4	4
+Lysimachia_vulgaris	0	0	0	0	0	+	0	1
+Hydrocotyle_vulgaris	2	2	4	4	4	4	+	2
+Menyanthes_trifoliata	1	2	2	2	2	2	2	2
+Epilobium_palustre	1	2	2	2	1	2	0	+
+Epilobium_tetragonum	0	0	0	0	0	+	0	0
+Eriophorum_angustifolium	0	0	0	0	0	+	0	0
+Galium_palustre	0	0	0	0	0	0	+	+
+Lycopus_europaeus	0	0	0	0	0	0	0	+
+Sphagnum_sp	5	5	5	5	5	5	1	3
+

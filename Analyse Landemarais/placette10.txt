@@ -1,0 +1,36 @@
+date_du_releve	Jul-12	Jul-13	Jul-14	Jul-15	Jul-16	Jun-17	Jun-19	Jun-21
+code_CORINE_habitat	54.59	54.59						
+code_EUR_15_habitat	71.40	71.40						
+surface_du_releve_(R_en_m)	3	3	3	3	3	3	3	3
+hauteur_de_vegetation_(cm)	120	120	170	140	110	120	100	150
+recouvrement_total_%	30	60	90	75	75	80	25	35
+recouvrement_ligneux__%	1	1	10	1	1	2	0	
+hauteur_strate_ligneuse__(cm)	110	110	170	100	50	120	0	
+recouvrement_herbacee_%	30	60	90	75	75	80	25	35
+hauteur_strate_herbacee_(cm)	120	120	160	140	100	120	100	150
+recouvrement_muscinal_%			1		3		0	
+hauteur_strate_muscinale_(cm)			0.5		5		0	
+hauteur_eau_libre_(cm)					20	1	35	40
+nombre_d_especes	10	12	11	14	12	12	7	8
+Salix_atrocinerea	+	+	2	+	+	1	0	0
+Salix_aurita	+	+	0	0	0	0	0	0
+Frangula_alnus	0	0	i	+	+	0	0	0
+Agrostis_stolonifera	0	0	0	1	0	+	0	0
+Molinia_caerulea	+	1	1	1	1	1	1	1
+Carex_rostrata	2	2	1	2	2	2	+	0
+Carex_paniculata	+	+	i	2	2	2	2	2
+Carex_canescens	0	0	0	+	+	1	+	0
+Juncus_effusus_conglomeratus	2	2	3	3	3	3	2	2
+Comarum_palustre	2	3	5	4	4	4	2	1
+Lysimachia_vulgaris	+	1	+	+	0	1	0	0
+Galium_palustre	0	+	1	1	+	0	0	+
+Equisetum_fluviatile	+	0	0	0	+	+	0	+
+Lycopus_europaeus	+	+	i	+	+	0	0	0
+Hydrocotyle_vulgaris	0	2	2	1	1	+	1	2
+Epilobium_palustre	0	+	0	+	0	0	0	+
+Eriophorum_angustifolium	0	0	0	0	0	+	0	0
+Lemna_minor	2	0	0	0	0	+	1	+
+Dryopteris_carthusiana	0	i	0	+	0	0	0	+
+Potamogeton_polygonifolius	0	0	0	+	+	0	0	0
+Ranunculus_flammula	0	0	0	0	+	0	0	0
+Sphagnum_sp	0	0	0	0	+	0	0	0

@@ -1,0 +1,26 @@
+date_du_releve	Jul-12	Jul-13	Jul-15	Jun-17	Jun-19	Jun-22
+code_CORINE_habitat	51.2	51.2				
+code_EUR_15_habitat	71.20	71.20				
+surface_du_releve_(R_en_m)	3	3		3	3	3
+hauteur_de_vegetation_(cm)	80	80	150	100	120	120
+recouvrement_total_%	100	100	100	100	100	100
+recouvrement_ligneux_bas_%	2	5	20	1	1	15
+hauteur_strate_ligneuse_basse_(cm)	60	60	50	70	80	85
+recouvrement_ligneux_haut_%	1	1	4		0	
+hauteur_strate_ligneuse_haute_(cm)	60	70	150		0	
+recouvrement_herbacee_%	95	95	90	90	95	80
+hauteur_strate_herbacee_(cm)	80	80	150	100	120	120
+recouvrement_muscinal_%	40	40	50	35	45	30
+hauteur_strate_muscinale_(cm)	30	30	20	20	25	300
+hauteur_eau_libre_(cm)			sec	sec	sec	
+nombre_d_especes	8	8	6	6	6	7
+Betula_pubescens	0	0	0	+	0	0
+Frangula_alnus	+	+	+	+	+	1
+Quercus_robur	+	+	1	0	0	0
+Calluna_vulgaris	+	1	1	1	1	1
+Erica_tetralix	+	2	2	2	2	2
+Molinia_caerulea	5	5	5	5	5	4
+Eriophorum_angustifolium	+	+	0	0	0	+
+Hydrocotyle_vulgaris	0	0	0	0	1	2
+Sphagnum_sp	3	4	3	3	3	3
+Aulacomnium_palustre	+	+	0	0	0	0
