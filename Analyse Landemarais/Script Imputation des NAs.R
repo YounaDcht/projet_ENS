@@ -25,6 +25,8 @@ impute.Hill.rs <- melt(impute.Hill, id.vars = "Placette", variable.name = "Anné
 
 
 # Statistiques descriptives -----------------------------------------------
+library(tidyr)
+library(rstatix)
 ## Shannon
 # Avec NAs
 Shannon.rs %>%
