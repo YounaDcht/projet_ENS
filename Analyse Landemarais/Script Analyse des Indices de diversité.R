@@ -12,7 +12,7 @@ library(ggplot2)
 library(reshape2)
 
 # Ajustement des tableaux de données
-# Avec NAs
+# Avec NA imputés
 Shannon.plot <- melt(Shannon, id.vars = "Placette", variable.name = "Année", value.name = "Indice")
 Simpson.plot <- melt(Simpson, id.vars = "Placette", variable.name = "Année", value.name = "Indice")
 Hill.plot <- melt(Hill, id.vars = "Placette", variable.name = "Année", value.name = "Indice")
@@ -55,6 +55,21 @@ Hill.plot %>%
 # Vérification de la normalité des individus ------------------------------
 library(tidyverse)
 library(rstatix)
+# Shannon
+Shannon.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+# Simpson
+Simpson.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+# Hill
+Hill.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+
+
+# Vérification de la normalité des individus ------------------------------
 # Shannon
 Shannon.plot %>%
   group_by(Année) %>%
