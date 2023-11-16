@@ -38,6 +38,21 @@ ggplot(Hill.plot, aes(x = Année, y = Indice)) +
 
 
 # Vérification des outliers -----------------------------------------------
+# Shannon
+Shannon.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+# Simpson
+Simpson.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+# Hill
+Hill.plot %>%
+  group_by(Année) %>%
+  identify_outliers(Indice)
+
+
+# Vérification de la normalité des individus ------------------------------
 library(tidyverse)
 library(rstatix)
 # Shannon
