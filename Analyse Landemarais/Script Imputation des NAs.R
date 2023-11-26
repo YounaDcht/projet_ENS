@@ -1,4 +1,5 @@
 ##### Imputation des NAs pour les indices de biodiversité #####
+library(ggplot2)
 
 # Importation des données -------------------------------------------------
 Shannon <- read.csv("Landemarais Shannon.csv")[,-1]
