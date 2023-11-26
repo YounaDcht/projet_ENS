@@ -1089,6 +1089,7 @@ Indices$Simpson<-simp
 
 ## On calcule ensuite l'indice de Hill : 
 Indices$Hill<-((Indices$Simpson^-1)/(exp(Indices$Shannon)))
+Indices$Hill<- 1 - Indices$Hill
 Indices$Placette<-as.character(Indices$Placette)
 
 ### Modification et exportation de trois data.frame
